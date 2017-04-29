@@ -1,0 +1,31 @@
+<template name="dbSearch">
+    <div id="searchModal" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <select id="db_search" class="film-select2" style="width:100%"></select>
+                </div>
+            </div>
+            {{#with film}}
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="row">
+                        <div class="col s5 m5 l5">
+                            <img class="materialboxed" src="{{poster}}">
+                        </div>
+                        <div class="col s7 m7 l7">
+                            <p>Plot: {{plot}}</p>
+                            <p>Actors: {{actor}}</p>
+                            <p>Awards: {{awards}}</p>
+                            <p>Genre: {{genre}}</p>
+                            <p>Time: {{runTime}}</p>
+                            <p>Type: {{type}}</p>
+                            <p>MetaScore: {{metaScore}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</template>

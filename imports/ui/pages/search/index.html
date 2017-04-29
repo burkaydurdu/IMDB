@@ -1,0 +1,69 @@
+<template name="search">
+    {{#if currentUser}}
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="card-panel">
+                    <div class="row">
+                        <form id="search">
+                            <div class="input-field col s3 m3 l3">
+                                <i class="material-icons prefix">search</i>
+                                <input id="t_search" type="text" class="validate">
+                                <label for="icon_prefix">Search Film</label>
+                            </div>
+                            <div class="input-field col s3 m3 l3">
+                                <select id="type">
+                                    <option value="movie" disabled selected>movie</option>
+                                    <option value="series">series</option>
+                                    <option value="episode">episode</option>
+                                </select>
+                                <label>Film Type</label>
+                            </div>
+                            <div class="input-field col s3 m3 l3">
+                                <select id="year">
+                                    <option value="" selected></option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                </select>
+                                <label>Year</label>
+                            </div>
+                            <div class="input-field col s3 m3 l3">
+                                <div class="col s6 m6 l6">
+                                    <a href="#searchModal" id="search-trigger" class="waves-effect green right btn"><i class="material-icons left ">data_usage</i>local</a>
+                                </div>
+                                <div class="col s6 m6 l6 ">
+                                    <button type="submit" class="btn waves-effect blue">search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{#each films}}
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <div class="col s2 m2 l2">
+                                <img class="materialboxed" src="{{Poster}}">
+                            </div>
+                        </div>
+                        <div class="card-stacked">
+                            <div class="row">
+                                <h4><a href="search/{{imdbID}}"> {{Title}} </a></h4>
+                                <p> {{Year}}</p>
+                                <p> {{Type}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    {{/if}}
+    {{>dbSearch}}
+</template>

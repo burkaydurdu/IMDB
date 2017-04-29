@@ -1,0 +1,19 @@
+<template name="register">
+
+    <div class="row">
+        <div class="card-panel hoverable col s12 m12 l6 offset-l3 ">
+            <div class="row">
+                <div class="col s6 m6 l6">
+                    <a id="facebook" class="btn darken-3 right"> <i class="large material-icons left">people</i>Facebook</a>
+                </div>
+                <div class="col s6 m6 l6">
+                    <a id="signs" class="btn darken-3 left"> <i class="large material-icons left">group_add</i>Sign-Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if isSing}}
+            {{>sign_up}}
+    {{/if}}
+</template>

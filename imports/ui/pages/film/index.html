@@ -1,0 +1,38 @@
+<template name="film">
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            {{#with film}}
+                <div class="Row">
+                    <div class="col s12 m12 l12">
+                        <h1> {{Title}}
+                            {{#if addControl imdbID}}
+                                <a class="btn-floating btn-large waves-effect waves-light light-green right" id="add"><i class="material-icons left">add</i></a>
+                            {{/if}}
+                        </h1>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l3">
+                        <img src="{{Poster}}">
+                    </div>
+                    <div class="col s12 m12 l8">
+                        <p>{{Plot}}</p>
+                        <p>Director: {{Director}}</p>
+                        <p>Actors: {{Actors}}</p>
+                        <p>Writer: {{Writer}}</p>
+                        <p>Awards: {{Awards}}</p>
+                        <p>Genre: {{Genre}}</p>
+                        <p>Relased: {{Released}}</p>
+                        <p>Time: {{Runtime}}</p>
+                        <p>Type: {{Type}}</p>
+                        <p>MetaScore: {{Metascore}}</p>
+                        <p>Rating: {{imdbRating}} [{{imdbVotes}}]</p>
+                    </div>
+                </div>
+            {{/with}}
+        </div>
+    </div>
+
+</template>
